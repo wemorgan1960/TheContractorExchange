@@ -10,10 +10,10 @@ namespace TheContractorExchange.WebUI.Controllers
 {
     public class ContractorManagerController : Controller
     {
-        ContractorRepository context;
+        InMemoryRepository<Contractor> context;
         public ContractorManagerController()
         {
-            context = new ContractorRepository();
+            context = new InMemoryRepository<Contractor>();
         }
         // GET: ContractorManager
         public ActionResult Index()

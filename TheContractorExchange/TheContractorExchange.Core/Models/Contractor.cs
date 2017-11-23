@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TheContractorExchange.Core.Models
 {
-    public class Contractor
+    public class Contractor:BaseEntity
     {
-        public string Id { get; set; }
+
         public string FirstName {get;set;}
         public string LastName { get; set; }
         public string City { get; set; }
@@ -16,11 +16,6 @@ namespace TheContractorExchange.Core.Models
         public string Country { get; set; }
         public string EmailAddress { get; set; }
         public string PhoneNumber { get; set; }
-
-
-        public Contractor()
-        {
-            this.Id = Guid.NewGuid().ToString();
-        }
+        
     }
 }
