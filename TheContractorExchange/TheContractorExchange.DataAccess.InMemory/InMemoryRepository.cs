@@ -4,11 +4,12 @@ using System.Linq;
 using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
+using TheContractorExchange.Core.Contracts;
 using TheContractorExchange.Core.Models;
 
 namespace TheContractorExchange.DataAccess.InMemory
 {
-    public class InMemoryRepository<T> where T: BaseEntity
+    public class InMemoryRepository<T> : IRepository<T> where T: BaseEntity
     {
         ObjectCache cache =  MemoryCache.Default;
 

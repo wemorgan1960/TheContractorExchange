@@ -5,15 +5,16 @@ using System.Web;
 using System.Web.Mvc;
 using TheContractorExchange.Core.Models;
 using TheContractorExchange.DataAccess.InMemory;
+using TheContractorExchange.Core.Contracts;
 
 namespace TheContractorExchange.WebUI.Controllers
 {
     public class ContractorManagerController : Controller
     {
-        InMemoryRepository<Contractor> context;
-        public ContractorManagerController()
+        IRepository<Contractor> context;
+        public ContractorManagerController(IRepository<Contractor> contractorContext)
         {
-            context = new InMemoryRepository<Contractor>();
+            context = contractorContext;
         }
         // GET: ContractorManager
         public ActionResult Index()
