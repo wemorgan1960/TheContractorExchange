@@ -194,6 +194,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContractorManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -276,6 +277,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ContractorManager\Index.cshtml" />
+    <Content Include="Views\ContractorManager\Create.cshtml" />
+    <Content Include="Views\ContractorManager\Edit.cshtml" />
+    <Content Include="Views\ContractorManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -284,6 +289,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TheContractorExchange.Core\TheContractorExchange.Core.csproj">
+      <Project>{c8a911ff-a9d0-4680-ba78-e34509677680}</Project>
+      <Name>TheContractorExchange.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TheContractorExchange.DataAccess.InMemory\TheContractorExchange.DataAccess.InMemory.csproj">
+      <Project>{8c346fe9-5409-43dc-acc0-fa50e33d11a5}</Project>
+      <Name>TheContractorExchange.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TheContractorExchange.DataAccess.SQL\TheContractorExchange.DataAccess.SQL.csproj">
+      <Project>{f7d92b4f-0285-40e6-8cc0-c35a03671a5e}</Project>
+      <Name>TheContractorExchange.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TheContractorExchange.Services\TheContractorExchange.Services.csproj">
+      <Project>{07aa24aa-7642-4b3b-8781-4a795c2731db}</Project>
+      <Name>TheContractorExchange.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
