@@ -1,7 +1,7 @@
 using System;
 using TheContractorExchange.Core.Contracts;
 using TheContractorExchange.Core.Models;
-using TheContractorExchange.DataAccess.InMemory;
+using TheContractorExchange.DataAccess.SQL;
 using Unity;
 
 namespace TheContractorExchange.WebUI
@@ -45,7 +45,7 @@ namespace TheContractorExchange.WebUI
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
 
-            container.RegisterType<IRepository<Contractor>, InMemoryRepository<Contractor>>();
+            container.RegisterType<IRepository<Contractor>, SQLRepository<Contractor>>();
         }
     }
 }
